@@ -1,0 +1,6 @@
+<div class="d-flex justify-content-center align-items-center header mb-5"
+  [@homeButton]="hoverState">
+  <mat-icon routerLink="/" class="ms-2 home-button" (mouseover)="hoverState='hover'"
+    (mouseleave)="hoverState='none'">home</mat-icon>
+  <div [ngStyle]="{'font-size': textSize, 'background-image': 'url('+ imageUrl +')'}">{{text}}</div>
+</div>

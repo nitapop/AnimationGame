@@ -1,0 +1,25 @@
+.img-props {
+  //background-size: contain;
+  //background-repeat: no-repeat;
+  height: 100px;
+  width: 100px;
+}
+
+.q-0 {
+  background-image: url("/assets/svg/q.png");
+
+  @extend .img-props;
+
+}
+.q-1 {
+  background-image: url("/assets/svg/u.png");
+  height: 250px;
+  width: 250px;
+  @extend .img-props;
+}
+.q-2 {
+  background-image: url("/assets/svg/i.png");
+  height: 240px;
+  width: 150px;
+  @extend .img-props;
+}

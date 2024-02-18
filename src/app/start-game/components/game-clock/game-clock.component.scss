@@ -1,0 +1,36 @@
+@property --colorPrimary {
+  syntax: "<color>";
+  initial-value: #af2338;
+  inherits: false;
+}
+
+@property --stop {
+  syntax: "<percentage>";
+  initial-value: 100%;
+  inherits: false;
+}
+
+.time-left {
+  font-size: 150px;
+}
+
+.time {
+  height: 300px;
+  width: 300px;
+  border-radius: 200px;
+  transition: --stop 0.5s, --colorPrimary 0.2s;
+  background: linear-gradient(
+      to bottom,
+      #deca42 var(--stop),
+      var(--colorPrimary)
+  );
+}
+
+.odd {
+  --colorPrimary: #164877;
+  --stop: 30%;
+}
+.even {
+  --colorPrimary: #af2338;
+  --stop: 70%;
+}

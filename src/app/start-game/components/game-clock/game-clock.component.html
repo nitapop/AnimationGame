@@ -1,0 +1,6 @@
+<div class="time-content align-self-center mx-auto" *ngIf="{value: timeRemaining$ | async} as time">
+  <div class="time d-flex justify-content-center align-items-center"
+    [ngClass]="even ? 'even' : 'odd'">
+    <span class="time-left opacity-50" [ngClass]="even ? 'text-primary' : 'text-danger'">{{time.value}}</span>
+  </div>
+</div>

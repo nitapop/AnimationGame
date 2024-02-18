@@ -1,0 +1,16 @@
+<app-header text="ANIMATIONS" textSize="120px" imageUrl="/assets/svg/angular.png"></app-header>
+<div class="d-flex gap-5 features-content">
+  <div class="d-flex flex-column gap-5 ms-5" [@featuresList]="featuresList.length">
+    <div *ngFor="let feature of featuresList" class="d-flex gap-2">
+      <img class="img-props" [src]="'/assets/svg/correct-icon.png'">
+      <div>{{feature}}</div>
+    </div>
+  </div><div class="d-flex flex-column gap-5 ms-5" [@featuresList]="featuresList.length">
+  <div *ngFor="let feature of functionsList" class="d-flex gap-2">
+    <img class="img-props" [src]="'/assets/svg/correct-icon.png'">
+    <div>{{feature}}</div>
+  </div>
+</div>
+
+
+</div>

@@ -1,0 +1,41 @@
+<div class="d-grid questions"
+  [@pauseScreen]="pauseScreenState"
+  [@endGame]="endGameState"
+  (@endGame.done)="endGameState === 'end' && onEndGame()">
+  <div class="header">
+    <app-header></app-header>
+  </div>
+
+  <ng-container *ngIf="endGameState !== 'end'">
+    <div class="question align-self-center ms-5">
+      <app-question
+        [questionInfo]="questions[questionIndex]"
+        [disabledButton]="disableAnswerBtn"
+        (correctAnswer)="correctAnswerEvent($event)"
+      ></app-question>
+    </div>
+    <div class="clock align-self-center mx-auto">
+      <app-game-clock [startTimer]="startQuestionTimer" (timesUp)="timesUp()"></app-game-clock>
+    </div>
+    <div class="footer align-self-center mx-auto">
+      <app-game-score [question]="questionSolved$ | async"></app-game-score>
+    </div>
+  </ng-container>
+
+</div>
+
+<div class="counter d-flex justify-content-center align-items-center"
+  *ngIf="pauseScreenState === 'active'">
+  <ng-container *ngIf="wishSuccessTimeLeft$ | async as timeLeft">
+    <div *ngIf="timeLeft > 0" class="time" [@counterState]="timeLeft">{{timeLeft}}</div>
+    <div *ngIf="timeLeft < 0" class="message"
+      [@successTextState]="successTextState"
+      (@successTextState.done)="pauseAnimationDone()">{{message}}
+    </div>
+  </ng-container>
+</div>
+
+
+
+
+

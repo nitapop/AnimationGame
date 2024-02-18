@@ -1,0 +1,13 @@
+.question-content {
+  font-family: "Arial Rounded MT Bold";
+}
+
+:host::ng-deep .mdc-radio__background {
+  position: absolute;
+  margin-right: 10px;
+}
+
+:host::ng-deep .mdc-radio {
+
+  margin-right: 20px;
+}

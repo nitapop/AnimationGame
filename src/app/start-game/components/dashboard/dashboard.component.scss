@@ -1,0 +1,41 @@
+
+.img-props {
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.img-0 {
+  background-image: url("/assets/svg/q.png");
+  height: 200px;
+  width: 200px;
+  @extend .img-props;
+
+}
+.img-1 {
+  background-image: url("/assets/svg/u.png");
+  height: 250px;
+  width: 250px;
+  @extend .img-props;
+}
+.img-2 {
+  background-image: url("/assets/svg/i.png");
+  height: 240px;
+  width: 150px;
+  @extend .img-props;
+}
+
+.img-3 {
+  background-image: url("/assets/svg/z.png");
+  height: 200px;
+  width: 300px;
+  @extend .img-props;
+}
+
+.game-btn {
+  width: 14rem;
+  height: 4rem;
+  font-size: 25px;
+  font-family: "Arial Rounded MT Bold";
+}
+
+

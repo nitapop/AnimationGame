@@ -1,0 +1,8 @@
+<app-header></app-header>
+
+
+<div class="instr-container d-flex flex-column gap-5 ms-5" [@instructionsList]="instructions.length">
+  <ng-container *ngFor="let item of instructions">
+    <div>{{item}}</div>
+  </ng-container>
+</div>

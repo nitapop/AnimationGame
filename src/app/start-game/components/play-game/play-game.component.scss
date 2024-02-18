@@ -1,0 +1,56 @@
+
+.questions {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 20% 60% 20%;
+}
+
+.full-row {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+.header {
+  @extend .full-row
+}
+
+.footer {
+  @extend .full-row
+}
+
+.pause-screen {
+  position: fixed;
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+}
+
+.counter {
+  @extend .pause-screen;
+
+  .time {
+    font-size: 400px;
+  }
+
+  .message {
+    font-size: 200px;
+  }
+}
+
+.next-question {
+  @extend .pause-screen;
+  .message {
+    font-size: 100px;
+    font-family: "Arial Rounded MT Bold";
+    color: #164877FF;
+  }
+}
+
+
+
+

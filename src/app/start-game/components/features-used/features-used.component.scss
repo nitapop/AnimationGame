@@ -1,0 +1,12 @@
+@mixin displayImage($property) {
+  width:  $property;
+  height:  $property;
+}
+.img-props {
+  @include displayImage(24px);
+}
+
+.features-content {
+  margin-top: 100px;
+  font-family: "Arial Black";
+}

@@ -1,0 +1,36 @@
+<div class="d-flex flex-column content">
+  <app-header></app-header>
+  <div class="d-flex gap-5 flex-row py-5 justify-content-center buttons">
+    <button type="button" class="btn btn-success game-btn me-2" routerLink="play"
+    >
+      <p class="m-0" [@animateText]="animateTextStates['play']"
+        (@animateText.done)="onAnimateButtonTextDone('play')"
+        (mouseover)="animateTextStates['play'] = 'active'">
+        Start game
+      </p></button>
+    <button type="button"
+      class="btn btn-warning game-btn"
+      routerLink="instructions"
+    ><p class="m-0" [@animateText]="animateTextStates['instr']"
+      (@animateText.done)="onAnimateButtonTextDone('instr')"
+      (mouseover)="animateTextStates['instr'] = 'active'">Instructions</p>
+    </button>
+    <button type="button"
+      class="btn btn-info game-btn d-flex align-items-center justify-content-center gap-2 text-white  "
+      routerLink="features"
+    ><p class="m-0">Animații</p>
+      <mat-icon>check</mat-icon>
+    </button>
+  </div>
+
+  <div class="d-flex flex-row flex-end mt-auto mb-5 justify-content-between align-items-center px-5">
+    <ng-container *ngFor="let item of images let i = index">
+      <div class="me-3" [ngClass]="'img-' + i"
+        [@scaleImages]="i+'-'+states[i]"
+        (@scaleImages.done)="index==i && animationDone()">
+      </div>
+    </ng-container>
+  </div>
+
+
+</div>

@@ -1,0 +1,15 @@
+<div class="question-content d-flex flex-column gap-5" [@questions]="questionInfo?.state">
+  <div><p class="fs-1 text-primary">{{questionInfo?.description}}</p>
+    <mat-radio-group
+      class="d-flex flex-column justify-content-center"
+      [(ngModel)]="response">
+      <ng-container *ngFor="let option of questionInfo?.options;">
+        <mat-radio-button class="example-radio-button fs-3" [@correctAnswer]="questionInfo?.answer === option && showCorrectAnswer"
+          [value]="option">{{option}} <mat-icon *ngIf="questionInfo?.answer === option && showCorrectAnswer">check</mat-icon></mat-radio-button>
+      </ng-container>
+    </mat-radio-group>
+  </div>
+
+  <button type="button" class="btn btn-success me-2 w-25" [disabled]="disabledButton || !response" (click)="checkAnswer()">
+    <p class="m-0">Răspunde</p></button>
+</div>
