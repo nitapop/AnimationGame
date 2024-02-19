@@ -11,5 +11,3 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   title = 'AnimationGame';
 }
-
-//bootstrapApplication(AppComponent,{ providers: [{ provide: APP_INITIALIZER, useFactory: () => console.error('orice'), multi: true }]})
